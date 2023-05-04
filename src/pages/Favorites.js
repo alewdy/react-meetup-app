@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import FavoritesContext from "../store/favorites-context";
 import MeetupList from "../components/meetups/MeetupList";
+import classes from './styles/Favorites.module.css'
 
 function FavoritesPage() {
     //Current Favorites snapshot
@@ -16,7 +17,7 @@ function FavoritesPage() {
     }
 
     return <section>
-        <h1>My Favorites</h1>
+        <h1 className={classes.title}>My Favorites</h1>
         {content}
     </section>
 }

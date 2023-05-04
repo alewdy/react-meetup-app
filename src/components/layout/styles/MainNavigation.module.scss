@@ -1,3 +1,8 @@
+$mobile  : 576px;
+$tablet  : 768px;
+$laptop  : 992px; 
+$desktop : 1200px;
+
 .header {
     width: 100%;
     height: 5rem;
@@ -6,19 +11,71 @@
     justify-content: space-between;
     background-color: #77002e;
     padding: 0 10%;
+
+    .logo {
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .badge {
+      background-color: #cc2062;
+      color: white;
+      border-radius: 12px;
+      padding: 0 1rem;
+      margin-left: 0.5rem;
+    }
   }
-  
-  .logo {
-    font-size: 2rem;
-    color: white;
-    font-weight: bold;
+
+  #hamburgerIcon{
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  #hamburgerIcon div{
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .open .bar2{
+    opacity: 0;
+  }
+
+  .open .bar3{
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+
+  .open .mobileMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mobileMenu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
   }
   
   .header ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: -webkit-inline-box;
     align-items: baseline;
   }
   
@@ -28,7 +85,7 @@
   
   .header a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #fcb8d2;
   }
   
@@ -37,11 +94,36 @@
   .header a.active {
     color: white;
   }
+
+  @media (max-width : $tablet){
+    .header{
+      .logo{
+        font-size: 25px;
+      }
+      .link{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        border: 2px solid black;
+      }
+    }
+
+    .header ul{
+      display: -webkit-inline-box;
+    }
+
+    .header li{
+      margin-left: 1rem;
+    }
+  }
+
+  @media (max-width : $mobile) {
+    #menu{
+      display: none;
+    }
+
+    #hamburgerIcon{
+      display: block !important;
+    }
   
-  .badge {
-    background-color: #cc2062;
-    color: white;
-    border-radius: 12px;
-    padding: 0 1rem;
-    margin-left: 0.5rem;
   }
