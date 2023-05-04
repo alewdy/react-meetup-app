@@ -12,7 +12,8 @@
 
 .image img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .content {
@@ -43,4 +44,4 @@
 .actions button:hover,
 .actions button:active {
   background-color: #ffe2ed;
-}
+}/*# sourceMappingURL=MeetupItem.module.css.map */

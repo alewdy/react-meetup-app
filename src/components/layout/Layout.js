@@ -1,4 +1,4 @@
-import classes from "./Layout.module.css";
+import classes from "./styles/Layout.module.css";
 import MainNaviagtion from "./MainNavigation";
 
 function Layout(props) {
